@@ -9,16 +9,25 @@ function App() {
   useEffect(() => {
     const backendConnected = async function () {
       const data = await fetch(API);
+      const text = await data.text();
 
-      setBack(data);
+      setBack(text);
     };
     backendConnected();
   }, []);
 
   return (
     <Router>
+      <div
+        style={{
+          backgroundColor: "#f8f9fa",
+          padding: "10px",
+          textAlign: "center",
+        }}
+      >
+        {back}
+      </div>
       <Routes>
-        <Route path="/" element={<div>{back}</div>} />
         <Route path="/" element={<NicknamePage />} />
         <Route path="/presentations" element={<PresentationListPage />} />
       </Routes>
