@@ -4,7 +4,7 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: "https://itransition-task6-full.netlify.app/",
+    origin: "https://itransition-task6-full.netlify.app",
   })
 );
 
