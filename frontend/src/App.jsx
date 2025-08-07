@@ -9,8 +9,8 @@ function App() {
   useEffect(() => {
     const backendConnected = async function () {
       const response = await fetch(API);
-      const data = await response.json();
-      setBack(data);
+
+      setBack(response);
     };
     backendConnected();
   }, []);
