@@ -8,9 +8,9 @@ function App() {
   const [back, setBack] = useState("");
   useEffect(() => {
     const backendConnected = async function () {
-      const response = await fetch(API);
+      const data = await fetch(API);
 
-      setBack(response);
+      setBack(data);
     };
     backendConnected();
   }, []);
